@@ -27,7 +27,47 @@
 
     <div class="row justify-content-center g-4">
 
-      <!-- Project 1: Scam Research -->
+       <!-- Project 1: Lucy: Health Equity Project -->
+      <div class="col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header fw-bold bg-success text-white">The Health Data & Analytics Challenge (Lucy Family Institute for Data and Society)</div>
+          <div class="card-body">
+            <p>In collaboration with teammates Toni Akintola, Rachael Thumma, and Louis Cornett, our team overlaid the EJScreen dataset with the EJI index tool dataset from ATSDR, narrowing analysis to 16 key environmental and demographic features. We then:</p>
+            <ul>
+              <li>Applied a <strong>gradient boosted tree model with SHAP explanations</strong> to each census tract to <strong>identify the most prevalent factors contributing to cancer and respiratory risk.</strong></li>
+
+              <li>Built a pipeline that fed model results and demographic data into an LLM constrained to the NCSL Environment & Natural Resources Legislation Database to <strong>generate state-level policy recommendations.</strong></li>
+
+              <li>Created an interactive web application featuring a <strong>zoomable heatmap</strong> of the entire United States, allowing users to explore the prevalence of each risk factor at any geographic scale and <strong>generate custom policy proposals on demand.</strong></li>
+
+              <li><strong>Won the Best Data Storytelling Award</strong> recieving $1000 in the competition for effectively communicating complex environmental health data and policy insights.</li>
+            </ul>
+            
+
+            <video controls class="w-100 mb-3">
+              <source src="./Projects/LucyDemo.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <a href="./Projects/Lucy_Abstract.pdf" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+              <i class="bi bi-file-earmark-pdf-fill me-1"></i> Abstract
+            </a>
+            <button class="btn btn-outline-dark me-2 mb-2" data-bs-toggle="modal" data-bs-target="#teamVideoModal">
+              <i class="bi bi-play-circle me-1"></i> Overview Video
+            </button>
+            <a href="./Projects/Environmental_Policy_Slides.pdf" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+              <i class="bi bi-file-earmark-pdf-fill me-1"></i> Slideshow
+            </a>
+            <button class="btn btn-outline-dark me-2 mb-2" data-bs-toggle="modal" data-bs-target="#teamPictureModal">
+              <i class="bi bi-image me-1"></i> Team Picture
+            </button>
+            <a href="https://github.com/toni-akintola/health-equity-challenge-ii/tree/main" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+              <i class="bi bi-github me-1"></i> GitHub Repo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Scam Research -->
       <div class="col-12">
         <div class="card h-100 shadow-sm">
           <div class="card-header fw-bold bg-primary text-white">Psychological Technique Detector for Scam Messages</div>
@@ -52,10 +92,10 @@
         </div>
       </div>
 
-      <!-- Project 2: 84.51 Data Club -->
+      <!-- Project 3: 84.51 Data Club -->
       <div class="col-12">
         <div class="card h-100 shadow-sm">
-          <div class="card-header fw-bold bg-success text-white">84.51 Data Club Project</div>
+          <div class="card-header fw-bold text-white" style="background-color: #5B2C6F;">84.51 Data Club Project</div>
           <div class="card-body">
             <p>This project involved processing and analyzing large-scale retail data as part of the <strong>Data Club of Notre Dame</strong>. I worked with over <strong>20 million lines of raw data</strong> using <strong>Pandas</strong> for cleaning and preparation.</p>
 
@@ -74,10 +114,10 @@
         </div>
       </div>
 
-      <!-- Project 3: Amazon SIBC -->
+      <!-- Project 4: Amazon SIBC -->
       <div class="col-12">
         <div class="card h-100 shadow-sm">
-          <div class="card-header fw-bold bg-warning text-dark">Amazon SIBC Project</div>
+          <div class="card-header fw-bold text-dark" style="background-color: #FF9900;">Amazon SIBC Project</div>
           <div class="card-body">
             <p>This project focused on improving the <strong>Amazon Prime Student membership</strong> experience as part of the <strong>Student International Business Council (SIBC) STEM program</strong> at Notre Dame.</p>
 
@@ -92,7 +132,7 @@
         </div>
       </div>
 
-      <!-- Project 4: World Health Data Website -->
+      <!-- Project 5: World Health Data Website -->
       <div class="col-12">
         <div class="card h-100 shadow-sm">
           <div class="card-header fw-bold bg-info text-white">World Health Data Website</div>
@@ -108,6 +148,39 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- Modal for Lucy Project Overview Video -->
+  <div class="modal fade" id="teamVideoModal" tabindex="-1" aria-labelledby="teamVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamVideoModalLabel">Overview Video</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <video id="teamVideoPlayer" controls class="w-100">
+            <source src="./Projects/lucy_demo.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Lucy Project Team Picture -->
+  <div class="modal fade" id="teamPictureModal" tabindex="-1" aria-labelledby="teamPictureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamPictureModalLabel">Team Picture</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="teamPictureImage" src="./Projects/team_picture.jpeg" class="w-100" alt="Team Picture">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -133,6 +206,19 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Added for beter UX of Overview Video (Lucy Challenge) -->
+  <script>
+  const teamVideoModal = document.getElementById('teamVideoModal');
+  const teamVideoPlayer = document.getElementById('teamVideoPlayer');
+  
+  teamVideoModal.addEventListener('hide.bs.modal', function () {
+    teamVideoPlayer.pause();
+    teamVideoPlayer.currentTime = 0;
+  });
+  </script>
+
+
 </body>
 </html>
 
